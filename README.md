@@ -6,14 +6,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The requiremnts to run the project are:
 
-- At least NodeJS 12.20 
+- At least NodeJS 12.20
 
 ```bash
 # For Debian based distros
 sudo apt install nodejs
 
 # For Arch based distros
-sudo pacman -S nodejs nodejs-lts-gallium 
+sudo pacman -S nodejs nodejs-lts-gallium
 
 # To check that node was sucesfully installed run
 node -v
@@ -30,11 +30,11 @@ cd ./demo_api_angular
 npm install @angular/cli
 ```
 
-Once both are installed, you need to run `npm install` in order to install the project dependencies. Then you can execute the development server as explained in the next section and access `http://localhost:4200/login` to see the login page.
+Once both are installed, you need to run `npm install` in order to install the project dependencies. Then you can execute the development server as explained in the next section and access `http://localhost:4200` to see the landing page.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/login`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
