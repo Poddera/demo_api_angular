@@ -1,4 +1,11 @@
 <mat-card id="logged-home-card">
   <p>You have logged correctly!</p>
-  <button [routerLink]="['/']" mat-raised-button color="primary">Logout</button>
+  <button
+    [routerLink]="['']"
+    mat-raised-button
+    color="primary"
+    (click)="logout()"
+  >
+    Logout
+  </button>
 </mat-card>

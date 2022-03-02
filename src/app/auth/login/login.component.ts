@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { LoginService } from './login.service';
+import { Observable } from 'rxjs';
+import { LoginService } from '../../shared/login.service';
 
 @Component({
   selector: 'app-login',
@@ -27,8 +28,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.loginService.login(this.loginForm.value);
-      if (this.loginService.loggedIn) this.router.navigate(['home']);
+      this.loginService
+        .login(this.loginForm.value)
+        .subscribe((res: Observable<any>) => {
+          this.router.navigate(['home']);
+        });
     } else {
       this.snackBar.open('Bad credentials', 'Close');
     }
