@@ -6,8 +6,29 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The requiremnts to run the project are:
 
-- At least NodeJS 12.20
+- At least NodeJS 12.20 
+
+```bash
+# For Debian based distros
+sudo apt install nodejs
+
+# For Arch based distros
+sudo pacman -S nodejs nodejs-lts-gallium 
+
+# To check that node was sucesfully installed run
+node -v
+```
+
 - Angular CLI 13.0.1
+
+```bash
+# To install angular CLI globally use
+sudo npm install -g @angular/cli
+
+# If you prefer to install it only for this project
+cd ./demo_api_angular
+npm install @angular/cli
+```
 
 Once both are installed, you need to run `npm install` in order to install the project dependencies. Then you can execute the development server as explained in the next section and access `http://localhost:4200/login` to see the login page.
 
