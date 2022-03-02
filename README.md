@@ -1,14 +1,19 @@
-# NgClientForms
+# Demo_api_angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
+## Requirements
+
+The requiremnts to run the project are:
+
+- At least NodeJS 12.20
+- Angular CLI 13.0.1
+
+Once both are installed, you need to run `npm install` in order to install the project dependencies. Then you can execute the development server as explained in the next section and access `http://localhost:4200/login` to see the login page.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/login`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
