@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private snackBar: MatSnackBar,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) {
     this.loginForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
@@ -26,6 +28,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       this.loginService.login(this.loginForm.value);
+      if (this.loginService.loggedIn) this.router.navigate(['home']);
     } else {
       this.snackBar.open('Bad credentials', 'Close');
     }

@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginService } from './components/login/login.service';
 import { AuthRoutingModule } from './auth-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -18,6 +19,7 @@ import { AuthRoutingModule } from './auth-routing.module';
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+};
+
+export const URLS = {
+  BASE_URL_COOKIES: 'http://200.40.237.7:8080/poddapi',
+  BASE_URL_JWT: 'http://200.40.237.7:8080/pa2',
 };
 
 /*

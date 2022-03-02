@@ -1,0 +1,7 @@
+{
+  "/poddapi": {
+    "target": "http://200.40.237.7:8080",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
