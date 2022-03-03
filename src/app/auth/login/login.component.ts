@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -28,13 +29,23 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.loginService
-        .login(this.loginForm.value)
-        .subscribe((res: Observable<any>) => {
-          this.router.navigate(['home']);
-        });
+      this.loginService.login(this.loginForm.value).subscribe(
+        (username: string) => {
+          this.router.navigate(['home', username]);
+        },
+        (error: HttpErrorResponse) => {
+          console.error(error);
+          this.snackBar.open(
+            'The providen credentials are not correct',
+            'Close'
+          );
+        }
+      );
     } else {
-      this.snackBar.open('Bad credentials', 'Close');
+      this.snackBar.open(
+        'Please ensure that all the fields are filled',
+        'Close'
+      );
     }
   }
 }
