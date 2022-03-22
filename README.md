@@ -51,3 +51,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Use cases
+
+The use cases that have been implemented in this app are discussed here
+
+### Login
+
+The user is able to login against a given endpoint. Once the user is logged in, `Angular Guards` are used to manage the access for the user to certain areas of the app
