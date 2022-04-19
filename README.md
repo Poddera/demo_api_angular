@@ -13,7 +13,7 @@ The requiremnts to run the project are:
 sudo apt install nodejs
 
 # For Arch based distros
-sudo pacman -S nodejs nodejs-lts-gallium
+sudo pacman -S nodejs
 
 # To check that node was sucesfully installed run
 node -v
