@@ -1,0 +1,10 @@
+.contact-form-card,.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-container{
+    padding: 0 40px;
+}

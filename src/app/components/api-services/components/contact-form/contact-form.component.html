@@ -1,0 +1,44 @@
+<mat-card class="contact-form-card">
+  <h1>Contact Form</h1>
+  <form
+    class="contact-form-container"
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <!--Email input-->
+    <mat-form-field appearance="standard">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter your email" formControlName="email" />
+    </mat-form-field>
+
+    <!--Message input-->
+    <mat-form-field appearance="standard">
+      <mat-label>Message</mat-label>
+      <input
+        matInput
+        placeholder="Enter your message"
+        formControlName="message"
+      />
+    </mat-form-field>
+
+    <!--Name input-->
+    <mat-form-field appearance="standard">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter your name" formControlName="name" />
+    </mat-form-field>
+
+    <!--Phone input-->
+    <mat-form-field appearance="standard">
+      <mat-label>Phone</mat-label>
+      <input
+        matInput
+        placeholder="Enter your phone number"
+        formControlName="phone"
+      />
+    </mat-form-field>
+
+    <div id="form-login-buttons">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</mat-card>

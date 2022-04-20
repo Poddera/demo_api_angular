@@ -1,5 +1,10 @@
-<mat-card id="logged-home-card">
+<mat-card class="home-card">
   <p>You have succesfully logged in as {{ this.username }}!</p>
+
+  <button [routerLink]="['/service']" mat-raised-button color="primary">
+    Check our services
+  </button>
+
   <button
     [routerLink]="['']"
     mat-raised-button
