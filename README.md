@@ -127,3 +127,7 @@ The use cases that have been implemented in this app are discussed here
 ### Login
 
 The user is able to login against a given endpoint. Once the user is logged in, `Angular Guards` are used to manage the access for the user to certain areas of the app
+
+### Notes
+Next method tries throw CORS non solved problem.
+
